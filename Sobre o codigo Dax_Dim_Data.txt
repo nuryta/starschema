@@ -1,0 +1,32 @@
+1. Definição de Variáveis
+dataMinVta: Captura a data mínima (mais antiga) da coluna Date na tabela Fato_Vendas.
+YeardataMin: Extrai o ano da data mínima capturada acima.
+dataMaxVta: Captura a data máxima (mais recente) da coluna Date na tabela Fato_Vendas.
+YeardataMax: Extrai o ano da data máxima capturada acima.
+2. Criação de uma Tabela de Datas (Tabela)
+Tabela: Utiliza a função CALENDARAUTO() para gerar uma tabela de datas automáticas, que são filtradas para incluir apenas os anos entre YeardataMin e YeardataMax. Isso cria uma tabela de datas que cobre o período em que há vendas registradas.
+3. Criação da Tabela de Calendário (Calendario)
+Calendario: Utiliza a função SELECTCOLUMNS para criar uma nova tabela, extraindo várias colunas da tabela Tabela e calculando colunas derivadas que são úteis para análises temporais. Abaixo estão as colunas criadas:
+
+Data: A data em si.
+Ano: O ano da data.
+Mes: O nome completo do mês.
+Periodo: Um valor inteiro no formato "YYYYMM" para identificar o período.
+Mes-Ano: Combinação do mês (abreviado) e ano no formato "MMM-YYYY".
+MesNro: O número do mês (1 para janeiro, 12 para dezembro).
+NroDia: O número do dia no mês.
+Trimestre: O trimestre da data no formato "T1", "T2", etc.
+NroTrimestre: O número do trimestre (1, 2, 3, 4).
+DiaSemana: O número do dia da semana (1 para segunda-feira, 7 para domingo).
+Semana: O número da semana no ano (segundo padrão ISO).
+Nome Dia: O nome completo do dia da semana (por exemplo, "Monday").
+Ano-Trimestre: Combinação do ano e trimestre no formato "YYYY-Tn".
+MesCurto: Nome abreviado do mês (por exemplo, "Jan").
+Dia: O número do dia do mês.
+Mes Atual: O número do mês atual.
+Trimestre Atual: O trimestre atual.
+Semestre: O semestre da data (1 ou 2).
+Ano-Mes: Combinação do ano e mês no formato "YYYY-MM".
+ID_Data: Um identificador único para a data no formato "YYYYMMDD".
+4. Retorno da Tabela
+RETURN Calendario: Retorna a tabela Calendario com todas as colunas definidas acima.
